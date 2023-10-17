@@ -23,7 +23,7 @@ As well as an [interactive map of Boston neighborhood populations](https://stati
 
 We started by cleaning the crime data sets by merging all the separate years into one combined crime data set (2015-2023). We then dropped all unnecessary columns then matched the neighborhood names with the District code from the BPD Districts file. We then calculated the area of each neighborhood using the GEOJson file and hand calculated the population for each neighborhood using the interactive map from statisticalatlas. Once we merged those two data sets we had to filter out the irrelevant crimes. We went through the Offense Codes data set and removed all codes related to crimes that wouldn't have a direct impact on public safety. After filtering out the irrelevant crimes we then found the total count of crimes in each neighborhood and calculated the crime rate per capita to normalize the crime rates. We then merged it with the count and area of open spaces in each neighborhood then found the percentage of open spaces relative to the area of each neighborhood. We then calculated the amount of crimes reported per day for each neighborhood and found the daily crime rate by dividing the amount of crimes per day by the population. After this, we split the set into training and testing data, 2015-2022 and 2023 respectively. We tried out several machine learning models including Decision Trees, Random Forest Regression, and K-Nearest Neighbors, and found that the Random Forest model was the most accurate when tested.
 
-IMG HERE
+<img src="/image1.png" width="65%">
 
 This model tested between population, population density, and open space percentage and found that the open space percentage had the most influence on models predictions. 
 Now that we know that the open space percentage has an impact on crime we can test it further by answering our main question:
@@ -34,8 +34,8 @@ Do neighborhoods with a high percentage of open space have a lower daily crime r
 ### Results
 We found that neighborhoods with more than 7% of open space have lower crime rates than those with open space less than or equal to 7%
 
-IMG HERE
-IMG HERE
+<img src="/image3.png" width="30%">
+<img src="/image2.png" width="50%">
 
 On the left in blue, we see the districts which contained less than 7% open spaces with over double the amount of crimes than the districts on the right in orange, with higher than 7% open spaces.
 
